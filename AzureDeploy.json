@@ -271,8 +271,7 @@
           {
             "name": "ipconfig-mgmt",
             "properties": {
-              "privateIPAllocationMethod": "Static",
-              "privateIPAddress": "[parameters('subnet0Address')]",
+              "privateIPAllocationMethod": "Dynamic",
               "publicIPAddress": {
                  "id": "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddressName'))]"
               },
@@ -297,8 +296,7 @@
           {
             "name": "ipconfig-untrust",
             "properties": {
-              "privateIPAllocationMethod": "Static",
-              "privateIPAddress": "[parameters('subnet1Address')]",
+              "privateIPAllocationMethod": "Dynamic",
               "subnet": {
                 "id": "[variables('subnet1Ref')]"
               }
@@ -318,8 +316,7 @@
           {
             "name": "ipconfig-trust",
             "properties": {
-              "privateIPAllocationMethod": "Static",
-              "privateIPAddress": "[parameters('subnet2Address')]",
+              "privateIPAllocationMethod": "Dynamic",
               "subnet": {
                 "id": "[variables('subnet2Ref')]"
               }
@@ -337,10 +334,9 @@
         "enableIPForwarding": true,
         "ipConfigurations": [
           {
-            "name": "ipconfig-dmz",
+            "name": "ipconfig-vpn",
             "properties": {
-              "privateIPAllocationMethod": "Static",
-              "privateIPAddress": "[parameters('subnet3Address')]",
+              "privateIPAllocationMethod": "Dynamic",
               "subnet": {
                 "id": "[variables('subnet3Ref')]"
               }
