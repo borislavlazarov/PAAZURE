@@ -17,7 +17,7 @@
     },
     "storageAccountExistingRG": {
        "type": "string",
-       "defaultValue" : "",
+       "defaultValue" : "rgkpmglab",
        "metadata": {
           "description": "Storage Accounts Resource Group."
        }
@@ -27,7 +27,7 @@
        "metadata": {
           "description": "EXISTING Availability Set name for Firewalls"
        },
-       "defaultValue": "AS-FW"
+       "defaultValue": "avset_pa_blob"
     },
     "vmSize": {
        "type": "string",
@@ -54,7 +54,7 @@
        "metadata": {
           "description": "PAN OS Version"
        },
-       "defaultValue": "7.1.1"
+       "defaultValue": "latest"
     },
     "imageSku": {
        "type": "string",
@@ -66,111 +66,83 @@
        "metadata": {
           "description": "Firewall License Model"
        },
-       "defaultValue": "bundle2"
+       "defaultValue": "bundle1"
     },
     "virtualNetworkName": { 
       "type": "string",
       "metadata": {
         "description": "Name of the EXISTING Virtual Network (VNET)"
       },
-      "defaultValue": "fwVNET"
+      "defaultValue": "vnet_core"
     },
     "virtualNetworkAddressPrefix": {
       "type": "string",
-      "defaultValue": "192.168.0.0/16",
+      "defaultValue": "10.162.144.0/22",
       "metadata": {
         "description": "EXISTING Virtual network address CIDR"
       }
     },
     "virtualNetworkExistingRGName": {
       "type": "string",
-      "defaultValue": "",
+      "defaultValue": "rg_kpmg",
       "metadata": {
         "description": "Name of resource group of EXISTING VNET"
       }
     },
     "subnet0Name": {
       "type": "string",
-      "defaultValue": "Mgmt",
+      "defaultValue": "PA-MGMT",
       "metadata": {
         "description": "EXISTING Subnet for Management"
       }
     },
     "subnet1Name": {
       "type": "string",
-      "defaultValue": "Untrust",
+      "defaultValue": "PA-UNTRUST",
       "metadata": {
         "description": "EXISTING Subnet for Untrust"
       }
     },
     "subnet2Name": {
       "type": "string",
-      "defaultValue": "Trust",
+      "defaultValue": "PA-TRUST",
       "metadata": {
         "description": "EXISTING Subnet for Trust"
       }
     },
     "subnet3Name": {
       "type": "string",
-      "defaultValue": "DMZ",
+      "defaultValue": "PA-VPN",
       "metadata": {
         "description": "EXISTING Subnet for DMZ"
       }
     },
     "subnet0Prefix": {
       "type": "string",
-      "defaultValue": "192.168.0.0/24",
+      "defaultValue": "10.162.144.0/28",
       "metadata": {
         "description": "EXISTING Mgmt subnet CIDR"
       }
     },
     "subnet1Prefix": {
       "type": "string",
-      "defaultValue": "192.168.1.0/24",
+      "defaultValue": "192.168.200.0/24",
       "metadata": {
         "description": "EXISTING Untrust subnet CIDR"
       }
     },
     "subnet2Prefix": {
       "type": "string",
-      "defaultValue": "192.168.2.0/24",
+      "defaultValue": "10.162.144.48/28",
       "metadata": {
         "description": "EXISTING Trust subnet CIDR"
       }
     },
     "subnet3Prefix": {
       "type": "string",
-      "defaultValue": "192.168.3.0/24",
+      "defaultValue": "10.162.144.16/28",
       "metadata": {
-        "description": "EXISTING DMZ subnet CIDR"
-      }
-    },
-    "subnet0Address": {
-      "type": "string",
-      "defaultValue": "192.168.0.4",
-      "metadata": {
-        "description": "Mgmt subnet static address"
-      }
-    },
-    "subnet1Address": {
-      "type": "string",
-      "defaultValue": "192.168.1.4",
-      "metadata": {
-        "description": "Untrust subnet static address"
-      }
-    },
-    "subnet2Address": {
-      "type": "string",
-      "defaultValue": "192.168.2.4",
-      "metadata": {
-        "description": "Trust subnet static address"
-      }
-    },
-    "subnet3Address": {
-      "type": "string",
-      "defaultValue": "192.168.3.4",
-      "metadata": {
-        "description": "DMZ subnet static address"
+        "description": "EXISTING VPN subnet CIDR"
       }
     },
     "adminUsername": {
