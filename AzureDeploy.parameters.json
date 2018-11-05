@@ -122,34 +122,6 @@
         "description": "DMZ subnet CIDR"
       }
     },
-    "subnet0Address": {
-      "type": "string",
-      "defaultValue": "192.168.0.4",
-      "metadata": {
-        "description": "Mgmt subnet start address"
-      }
-    },
-    "subnet1Address": {
-      "type": "string",
-      "defaultValue": "192.168.1.4",
-      "metadata": {
-        "description": "Untrust subnet start address"
-      }
-    },
-    "subnet2Address": {
-      "type": "string",
-      "defaultValue": "192.168.2.4",
-      "metadata": {
-        "description": "Trust subnet start address"
-      }
-    },
-    "subnet3Address": {
-      "type": "string",
-      "defaultValue": "192.168.3.4",
-      "metadata": {
-        "description": "DMZ subnet start address"
-      }
-    },
     "adminUsername": {
       "type": "string",
       "metadata": {
