@@ -176,7 +176,7 @@
     }
   },
   "variables": {
-    "apiVersion": "2017-08-01",
+    "apiVersion": "2017-12-01",
     "imagePublisher": "paloaltonetworks",
     "imageOffer" : "vmseries1",
     "nicName": "[concat(parameters('vmName'), '-eth')]",
@@ -219,7 +219,7 @@
   },
   "resources": [         
     {
-      "apiVersion": "2017-08-01",
+      "apiVersion": "2017-12-01",
       "type": "Microsoft.Network/publicIPAddresses",
 	  "sku": {
 		"name": "Standard",
@@ -238,7 +238,7 @@
       "name": "[concat(variables('nicName'), '0')]",
       "type": "Microsoft.Network/networkInterfaces",
       "location": "[resourceGroup().location]",
-      "apiVersion": "2017-08-01",
+      "apiVersion": "2017-12-01",
       "dependsOn": [
             "[concat('Microsoft.Network/publicIPAddresses/', parameters('publicIPAddressName'))]"
         ],
@@ -265,7 +265,7 @@
       "location": "[resourceGroup().location]",
        "dependsOn": [
             ],
-      "apiVersion": "2017-08-01",
+      "apiVersion": "2017-12-01",
       "properties": {
       "enableIPForwarding": true,
         "ipConfigurations": [
@@ -285,7 +285,7 @@
       "name": "[concat(variables('nicName'), '2')]",
       "type": "Microsoft.Network/networkInterfaces",
       "location": "[resourceGroup().location]",
-      "apiVersion": "2017-08-01",
+      "apiVersion": "2017-12-01",
       "properties": {
         "enableIPForwarding": true,
         "ipConfigurations": [
@@ -305,7 +305,7 @@
       "name": "[concat(variables('nicName'), '3')]",
       "type": "Microsoft.Network/networkInterfaces",
       "location": "[resourceGroup().location]",
-      "apiVersion": "2017-08-01",
+      "apiVersion": "2017-12-01",
       "properties": {
         "enableIPForwarding": true,
         "ipConfigurations": [
