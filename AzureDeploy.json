@@ -221,6 +221,10 @@
     {
       "apiVersion": "2015-06-15",
       "type": "Microsoft.Network/publicIPAddresses",
+	  "sku": {
+		"name": "Standard",
+		"tier": "Regional"
+      },
       "name": "[parameters('publicIPAddressName')]",
       "location": "[resourceGroup().location]",
       "properties": {
