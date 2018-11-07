@@ -222,7 +222,7 @@
       "apiVersion": "2018-06-01",
       "type": "Microsoft.Network/publicIPAddresses",
 	  "sku": {
-		"name": "Standard",
+		"name": "Basic",
 		"tier": "Regional"
       },
       "name": "[parameters('publicIPAddressName')]",
